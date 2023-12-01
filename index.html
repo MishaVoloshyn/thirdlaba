@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Написать функцию, которая принимает 2 числа и возвращает меньшее из них. -->
+    <!-- <script>
+        function min() {
+            if (arguments[0] < arguments[1]) {
+                return arguments[0];
+            } else {
+                return arguments[1];
+            }
+        }   
+    </script>
+    <script>
+        let rezult = min(2,5);
+        console.log(rezult);
+    </script> -->
+
+
+
+
+    <!-- 2. Написать функцию, которая возводит переданное число
+    в указанную степень. -->
+    <!-- <script>
+        let rezult1 = 1;
+        function pow1() {
+            for (let i = 1; i <= arguments[1]; i++) {
+                rezult1 *= arguments[0];
+            }
+            return rezult1;
+
+        }   
+    </script>
+    <script>
+        let rezult = pow1(2, 5);
+        console.log(rezult);
+    </script> -->
+
+
+
+
+    <!-- 3. Написать функцию, которая принимает 2 числа и знак
+    (+ - * /), считает пример и возвращает результат. -->
+    <!-- <script>
+        function toSolve() {
+            let num1 = arguments[0];
+            let num2 = arguments[1];
+            let sign = arguments[2];
+            switch (sign) {
+                case "+":
+                    return num1 + num2;
+                    break;
+                case "-":
+                    return num1 - num2;
+                    break;
+                case "*":
+                    return num1 * num2;
+                    break;
+                case "/":
+                    return num1 / num2;
+                    break;
+                default:
+                    return null;
+                    break;
+            }
+        }
+    </script>
+    <script>
+        let rez = toSolve(5, 5, "*");
+        console.log(rez);
+    </script> -->
+
+
+    <!-- 4. Написать функцию, которая проверяет, является ли переданное ей число простым. -->
+
+    <!-- <script>
+        function isPrime() {
+            let num = arguments[0];
+            if (num <= 1) {
+                return false;
+            }
+
+            for (let i = 2; i * i <= num; i++) {
+                if (num % i === 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+    <script>
+        isPrime(11);
+        if (isPrime = false) {
+            console.log("false")
+        }
+        if (isPrime = true) {
+            console.log("true")
+        }
+    </script> -->
+
+
+    <!-- 5. Написать функцию, которая принимает число и выводит
+    таблицу умножения для этого числа. Вызовите функцию
+    для всех чисел от 2 до 9. -->
+    <!-- <script>
+        function printMultiplicationTable() {
+            let num = arguments[0];
+            console.log("Таблица умножения на " + num);
+            for (let i = 1; i <= 10; i++) {
+                console.log(num + " * " + i + " = " + num * i);
+            }
+        }
+
+        for (let i = 2; i <= 9; i++) {
+            printMultiplicationTable(i);
+        }
+
+
+    </script> -->
+
+
+
+    <!-- 6. Написать функцию, которая реализует работу оператора %.
+    Функция принимает 2 параметра и возвращает остаток от
+    деления первого параметра на второй. В функции использовать только + - * /, оператор % не использовать. -->
+
+    <!-- <script>
+        function del() {
+            let num = arguments[0];
+            let num2 = arguments[1];
+            let check = true;
+            let counter = 0;
+            do {
+                if (num > num2) {
+                    num = num - num2;
+                    counter++;
+                }
+                else{
+                    counter+= num/num2;
+                    check = false;
+                }
+            }
+            while (check == true);
+            return counter;
+            
+        }
+    </script>
+
+    <script>
+        console.log(del(100, 8));
+    </script> -->
+
+    <!-- 7. Написать функцию, которая принимает от 1 до 5 чисел и
+    возвращает их сумму. -->
+
+    <!-- <script>
+        function plus() {
+            let counter = 0;
+            for (let i = 0; i <= arguments.length-1; i++) {
+                counter += arguments[i];
+            }
+            return counter;
+        }
+    </script>
+
+    <script>
+        console.log(plus(100, 8));
+    </script> -->
+
+
+    <!-- 8. Написать функцию, которая принимает от 1 до 5 чисел и
+    возвращает большее из них. -->
+
+    <script>
+        function more() {
+            let counter = 0;
+            for (let i = 0; i <= arguments.length - 1; i++) {
+                if (counter < arguments[i]) {
+                    counter = arguments[i];
+                }
+            }
+            return counter;
+        }
+    </script>
+
+    <script>
+        console.log(more(99, 100, 100, 8, 500));
+    </script>
+
+
+
+    <!-- 9. Написать функцию, которая выводит все четные или нечетные числа, в указанном пользователем 
+    диапазоне. Какие числа выводить, определяется третьим параметром типа
+    bool (true – четные, false – нечетные). -->
+    <!-- <script>
+        function printEvenOrOddNumbers(min, max, evenOdd) {
+            if (min > max) {
+                console.log("Диапазон некорректен");
+                return;
+            }
+
+            let type = evenOdd ? "четные" : "нечетные";
+            console.log("Вывод " + type + " чисел в диапазоне от " + min + " до " + max);
+
+            for (let i = min; i <= max; i++) {
+                if (i % 2 == evenOdd) {
+                    console.log(i);
+                }
+            }
+        }
+    </script>
+    <script>
+        printEvenOrOddNumbers(1, 10, true); // выведет четные числа от 1 до 10
+        printEvenOrOddNumbers(1, 10, false); // выведет нечетные числа от 1 до 10
+    </script> -->
+
+
+
+
+    <!-- 10. Написать функцию, которая принимает дату (день, месяц,
+    год) и возвращает дату следующего дня в виде строки
+    «дд.мм.гггг». Проверку на високосный год желательно
+    написать отдельной функцией -->
+    <!-- <script>
+        function nextDate(day, month, year) {
+            let nextDay = day + 1;
+
+            if (month === 2 && isLeapYear(year) && nextDay > 29) {
+                nextDay = 1;
+                month = 3;
+            } else if (nextDay > daysInMonth(month, year)) {
+                nextDay = 1;
+                month++;
+            }
+
+            return `${nextDay}.${month}.${year}`;
+        }
+
+        function isLeapYear(year) {
+            return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+        }
+
+        function daysInMonth(month, year) {
+            let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            if (month === 2 && isLeapYear(year)) {
+                return 29;
+            }
+
+            return daysInMonth[month - 1];
+        }
+
+    </script>
+    <script>
+        console.log(nextDate(3, 12, 2023));
+        console.log(nextDate(28, 2, 2024)); 
+        console.log(nextDate(30, 12, 2023)); 
+    </script> -->
+
+
+</body>
+
+</html>
